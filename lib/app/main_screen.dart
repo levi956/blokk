@@ -3,16 +3,11 @@ import 'package:bloc_arch/core/framework/base_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class MainScreenRoute extends MaterialPageRoute<bool> {
-  MainScreenRoute() : super(builder: (_) => const MainScreen());
-}
-
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
-  _MainScreenState createState() => _MainScreenState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
@@ -23,6 +18,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     somethingController = SomethingController();
+    somethingController.get();
     super.initState();
   }
 
