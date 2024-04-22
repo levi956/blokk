@@ -2,9 +2,7 @@ class BaseState<T> {
   const BaseState();
 }
 
-class Init<T> extends BaseState<T> {
-  const Init();
-}
+class Initial<T> extends BaseState<T> {}
 
 class Loading<T> extends BaseState<T> {
   const Loading();

@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'base_state.dart';
 
 class NoArsBaseCubit<T> extends Cubit<BaseState<T>> {
-  NoArsBaseCubit({required MainFunction<T> function}) : super(const Init()) {
+  NoArsBaseCubit({required MainFunction<T> function}) : super(Initial()) {
     _mainFunction = function;
   }
 

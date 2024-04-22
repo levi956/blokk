@@ -21,13 +21,6 @@ ServiceResponse<T> serveError<T>({required String error}) {
   );
 }
 
-ServiceResponse<T> serveNoInternetError<T>() {
-  return ServiceResponse<T>(
-    error: true,
-    message: 'Check your Internet Connection.',
-  );
-}
-
 ServiceResponse<T> serveData<T>({required T? value, String? message}) {
   return ServiceResponse<T>(
     error: false,
